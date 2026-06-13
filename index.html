@@ -1,137 +1,133 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Hanna & Berci | 2027.06.26.</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanna & Berci | 2027.06.26.</title>
+    
+    <!-- Új, magas minőségű betűtípusok: Cormorant Garamond és Montserrat -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap)" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HERO -->
+<!-- NYITÓOLDAL -->
 <header class="hero">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <div class="hero-image-placeholder">
-            SAVE THE DATE KÉP HELYE
-        </div>
-
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+        <p class="date-badge">2027. június 26.</p>
         <h1>Hanna & Berci</h1>
-        <p class="date">2027.06.26.</p>
-
-        <div class="countdown" id="countdown">Betöltés...</div>
+        <p class="subtitle">Összeházasodunk</p>
+        <div class="countdown" id="countdown">Várakozás a nagy napra...</div>
     </div>
 </header>
 
-<!-- MEGHÍVÓ -->
+<!-- KÖSZÖNTŐ -->
 <section class="section">
-    <div class="card reveal">
-        <h2>Meghívó</h2>
-
-        <p>Sziasztok!</p>
-
-        <p>
-            2027. június 26-án összeházasodunk, és nagyon örülünk,
-            hogy ezt a napot veletek ünnepelhetjük.
-        </p>
-
-        <p>
-            Az oldalon minden fontos információt megtaláltok majd,
-            ahogy közeledik a nagy nap.
-        </p>
-
-        <p class="signature">Hanna & Berci</p>
+    <div class="container reveal center">
+        <h2 class="section-title">Szeretettel köszöntünk</h2>
+        <div class="floral-divider">~ 🌸 ~</div>
+        <p class="lead-text">A legszebb pillanatok akkor nyernek igazi értelmet, ha azokkal oszthatjuk meg, akiket a legjobban szeretünk.</p>
+        <p>Hatalmas örömmel és izgalommal jelentjük be, hogy 2027. június 26-án hivatalosan is összekötjük az életünket. Nagyon sokat jelentne számunkra, ha velünk ünnepelnétek ezen a vidám, vadvirágos, nyári napon. Ez az oldal azért jött létre, hogy minden fontos információt megtaláljatok egy helyen.</p>
+        <p class="signature">Hanna és Berci</p>
     </div>
 </section>
 
-<!-- RSVP -->
-<section class="section alt">
-    <div class="card reveal">
-        <h2>Részvétel visszajelzés</h2>
-
-        <p>
-            Kérünk, segítsétek a szervezést azzal, hogy kitöltitek az űrlapot.
-        </p>
-
-        <a class="button" href="#" target="_blank">
-            Google Form megnyitása
-        </a>
-    </div>
-</section>
-
-<!-- EMAIL -->
-<section class="section">
-    <div class="card reveal">
-        <h2>Értesítést kérek</h2>
-
-        <p>
-            Nem szeretnél lemaradni semmiről?
-            Iratkozz fel, és szólunk, ha új információ kerül fel.
-        </p>
-
-        <input class="input" type="email" placeholder="email@pelda.hu" disabled>
-
-        <a class="button secondary" href="#">
-            Hamarosan
-        </a>
-    </div>
-</section>
-
-<!-- RÓLUNK -->
-<section class="section alt">
-    <div class="card reveal">
-        <h2>Rólunk</h2>
-
-        <p>
-            Néhány kedvenc pillanatunk az elmúlt évekből.
-        </p>
-
-        <div class="grid">
-            <div class="img">KÉP</div>
-            <div class="img">KÉP</div>
-            <div class="img">KÉP</div>
-            <div class="img">KÉP</div>
-        </div>
-    </div>
-</section>
-
-<!-- HELYSZÍN -->
-<section class="section">
-    <div class="card reveal">
-        <h2>Helyszín</h2>
-
-        <p>
-            Hamarosan megosztjuk a pontos helyszínt és minden fontos tudnivalót.
-        </p>
-
-        <div class="grid">
-            <div class="img blue">HELYSZÍN</div>
-            <div class="img blue">HELYSZÍN</div>
-            <div class="img blue">HELYSZÍN</div>
+<!-- GALÉRIA -->
+<section class="section bg-blush">
+    <div class="container reveal">
+        <h2 class="section-title center">Pillanatképek</h2>
+        <p class="center lead-text">Ilyen vidám, színes és élettel teli ünneplést álmodtunk meg.</p>
+        
+        <div class="gallery-grid">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800)" alt="Vadvirágok" class="gallery-img">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Esküvői asztal" class="gallery-img mt-down">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=800)" alt="Csokor" class="gallery-img">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800)" alt="Vidám pillanatok" class="gallery-img mt-down">
         </div>
     </div>
 </section>
 
 <!-- PROGRAM -->
-<section class="section alt">
-    <div class="card reveal center">
-        <h2>A nagy nap menete</h2>
-
-        <div class="soon">
-            🌼 Coming Soon 🌼
+<section class="section">
+    <div class="container reveal">
+        <h2 class="section-title center">A Nagy Nap Menete</h2>
+        <div class="floral-divider">~ ✨ ~</div>
+        
+        <div class="elegant-timeline">
+            <div class="timeline-item">
+                <div class="time">14:30</div>
+                <div class="dot dot-peach"></div>
+                <div class="timeline-content">Vendégvárás, koccintás és falatkák</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">16:00</div>
+                <div class="dot dot-bluebell"></div>
+                <div class="timeline-content">Polgári szertartás a természetben</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">17:00</div>
+                <div class="dot dot-sage"></div>
+                <div class="timeline-content">Közös fotózás és gratuláció</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">18:30</div>
+                <div class="dot dot-yellow"></div>
+                <div class="timeline-content">Ünnepi vacsora</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">21:00</div>
+                <div class="dot dot-lilac"></div>
+                <div class="timeline-content">Nyitótánc, majd buli kifulladásig!</div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- TUDNIVALÓK -->
+<section class="section bg-blush">
+    <div class="container reveal">
+        <h2 class="section-title center">Fontos Tudnivalók</h2>
+        <div class="floral-divider">~ 🌿 ~</div>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Vadvirág Birtok</h3>
+                <p><strong>Példa település, Virág utca 1.</strong><br>A szertartás és a lagzi is egy helyen, gyönyörű szabadtéri környezetben lesz. Kényelmes parkolást biztosítunk mindenki számára.</p>
+            </div>
+            <div class="info-item">
+                <h3>Dress Code</h3>
+                <p>Elegáns, de kényelmes. A hangsúly a pasztell és vidám színeken van. Kérjük, a fehér és a teljesen fekete ruhákat mellőzzétek, a fű miatt pedig a tűsarkú helyett a vastagabb sarkú cipőket ajánljuk.</p>
+            </div>
+            <div class="info-item">
+                <h3>Ajtónálló Ajándék</h3>
+                <p>A legnagyobb ajándék számunkra, ha velünk ünnepeltek! Ha ezen felül is szeretnétek meglepni minket, a közös életünk elindításához való hozzájárulást borítékban örömmel fogadjuk.</p>
+            </div>
+            <div class="info-item">
+                <h3>Szállás</h3>
+                <p>A legközelebbi szálláshelyeket a környéken hamarosan listázzuk. Ha igényeltek szobát, kérjük, az RSVP űrlapon jelezzétek előre felénk!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RSVP -->
+<section class="section">
+    <div class="container reveal center">
+        <h2 class="section-title">Visszajelzés (RSVP)</h2>
+        <p class="lead-text">Kérjük, legkésőbb 2027. május 1-ig jelezzétek részvételi szándékotokat.</p>
+        <p>A vacsora és az ültetés pontos megtervezéséhez nagy segítség számunkra, ha időben kitöltitek az űrlapot. Köszönjük!</p>
+        
+        <a class="btn-elegant" href="#" target="_blank">Részvétel Megerősítése</a>
+        <p class="small-text"><br>Ide kerül majd a Google Űrlap hivatkozása.</p>
+    </div>
+</section>
+
 <footer>
-    Hanna & Berci • 2027.06.26.
+    <p>Szeretettel várunk<br><span>Hanna & Berci</span></p>
 </footer>
 
 <script src="script.js"></script>
