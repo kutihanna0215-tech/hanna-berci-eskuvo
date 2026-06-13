@@ -1,0 +1,174 @@
+:root{
+    --bg:#FFFDF8;
+    --card:#ffffff;
+    --text:#3b3b3b;
+
+    --mauve:#A86A8A;
+    --pink:#E77AAE;
+    --yellow:#F3C94A;
+    --blue:#6A95D8;
+    --green:#8FAF72;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:20px;
+}
+
+.hero-image-placeholder{
+    height:320px;
+    border:2px dashed var(--pink);
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:25px;
+    color:var(--mauve);
+}
+
+h1{
+    font-family:"Playfair Display";
+    font-size:3rem;
+    color:var(--mauve);
+}
+
+.date{
+    color:var(--yellow);
+    margin-top:10px;
+    font-weight:600;
+}
+
+.countdown{
+    margin-top:15px;
+    font-size:1.1rem;
+}
+
+/* SECTIONS */
+.section{
+    padding:80px 20px;
+}
+
+.alt{
+    background:#faf7f2;
+}
+
+.card{
+    max-width:900px;
+    margin:auto;
+    background:var(--card);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.center{
+    text-align:center;
+}
+
+h2{
+    font-family:"Playfair Display";
+    margin-bottom:20px;
+    color:var(--mauve);
+}
+
+p{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+.signature{
+    margin-top:25px;
+    font-weight:600;
+}
+
+/* BUTTON */
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    background:var(--yellow);
+    color:#333;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:600;
+}
+
+.button.secondary{
+    background:var(--pink);
+    color:white;
+}
+
+/* INPUT */
+.input{
+    width:100%;
+    max-width:400px;
+    padding:12px;
+    margin-top:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.img{
+    height:180px;
+    border-radius:15px;
+    border:2px dashed var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.img.blue{
+    border-color:var(--blue);
+}
+
+/* SOON */
+.soon{
+    font-size:1.5rem;
+    padding:40px;
+    color:var(--mauve);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+/* ANIMATION */
+.reveal{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 0.8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
