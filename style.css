@@ -1,174 +1,321 @@
-:root{
-    --bg:#FFFDF8;
-    --card:#ffffff;
-    --text:#3b3b3b;
-
-    --mauve:#A86A8A;
-    --pink:#E77AAE;
-    --yellow:#F3C94A;
-    --blue:#6A95D8;
-    --green:#8FAF72;
+/* --- SZÍNPALETTA ÉS VÁLTOZÓK --- */
+:root {
+    --c-yellow: #f1c26b;
+    --c-peach: #e78c81;
+    --c-bluebell: #a6b7d7;
+    --c-sage: #aabc90;
+    --c-lilac: #b3a5d2;
+    --c-peony: #e49bb4;
+    
+    --bg-page: #FCFAF8;    /* Törtfehér, nagyon elegáns alapszín */
+    --bg-blush: #F9F4F1;   /* Finom, leheletnyi barackos/púderes háttér a szekciók elválasztásához */
+    
+    --text-main: #3E3B3A;  /* Sötét faszén, lágyabb a feketénél */
+    --text-light: #7A7571;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Inter, sans-serif;
-    background:var(--bg);
-    color:var(--text);
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.8;
+    font-weight: 300;
 }
 
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    position:relative;
-    padding:20px;
+/* --- TIPOGRÁFIA --- */
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--text-main);
 }
 
-.hero-image-placeholder{
-    height:320px;
-    border:2px dashed var(--pink);
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:25px;
-    color:var(--mauve);
+.section-title {
+    font-size: 2.8rem;
+    color: var(--c-peach);
+    margin-bottom: 5px;
 }
 
-h1{
-    font-family:"Playfair Display";
-    font-size:3rem;
-    color:var(--mauve);
+.lead-text {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
 }
 
-.date{
-    color:var(--yellow);
-    margin-top:10px;
-    font-weight:600;
+.center { text-align: center; }
+
+/* Kifinomult díszítőelem a címek alatt */
+.floral-divider {
+    font-size: 1.2rem;
+    color: var(--c-sage);
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+    opacity: 0.7;
 }
 
-.countdown{
-    margin-top:15px;
-    font-size:1.1rem;
+/* --- NYITÓOLDAL (HERO) --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Virágos hangulatkép a háttérben */
+    background: url('[images.unsplash.com](https://images.unsplash.com/photo-1460039230329-eb070fc6c90c?auto=format&fit=crop&q=80&w=1600)') center/cover no-repeat;
+    text-align: center;
 }
 
-/* SECTIONS */
-.section{
-    padding:80px 20px;
+/* Sugárirányú, finom átmenet, hogy eltüntessük a dobozt, de olvasható maradjon a szöveg */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(252,250,248,0.85) 0%, rgba(252,250,248,0.3) 100%);
 }
 
-.alt{
-    background:#faf7f2;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
 }
 
-.card{
-    max-width:900px;
-    margin:auto;
-    background:var(--card);
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+.date-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: var(--text-main);
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.center{
-    text-align:center;
+h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: var(--text-main);
 }
 
-h2{
-    font-family:"Playfair Display";
-    margin-bottom:20px;
-    color:var(--mauve);
+.subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--c-peach);
 }
 
-p{
-    margin-bottom:15px;
-    line-height:1.7;
+.countdown {
+    margin-top: 40px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
 }
 
-.signature{
-    margin-top:25px;
-    font-weight:600;
+/* --- SZEKCIÓK & ELRENDEZÉS --- */
+.section {
+    padding: 120px 20px; /* Nagy, levegős térközök */
 }
 
-/* BUTTON */
-.button{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 22px;
-    background:var(--yellow);
-    color:#333;
-    text-decoration:none;
-    border-radius:999px;
-    font-weight:600;
+.bg-blush {
+    background-color: var(--bg-blush);
 }
 
-.button.secondary{
-    background:var(--pink);
-    color:white;
+.container {
+    max-width: 800px;
+    margin: auto;
 }
 
-/* INPUT */
-.input{
-    width:100%;
-    max-width:400px;
-    padding:12px;
-    margin-top:15px;
-    border-radius:10px;
-    border:1px solid #ddd;
+.container p {
+    margin-bottom: 20px;
 }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-    margin-top:25px;
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--c-sage);
+    margin-top: 40px;
 }
 
-.img{
-    height:180px;
-    border-radius:15px;
-    border:2px dashed var(--green);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* --- GALÉRIA (Boltíves / Arch stílus) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 50px;
 }
 
-.img.blue{
-    border-color:var(--blue);
+.gallery-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    /* Elegáns boltív forma: felül kerek, alul egyenesebb */
+    border-radius: 150px 150px 15px 15px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
 
-/* SOON */
-.soon{
-    font-size:1.5rem;
-    padding:40px;
-    color:var(--mauve);
+/* A rács második és negyedik képe lejjebb csúszik, megtörve a szigorú rendet */
+.mt-down {
+    margin-top: 40px;
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:40px;
-    color:#777;
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
 }
 
-/* ANIMATION */
-.reveal{
-    opacity:0;
-    transform:translateY(20px);
-    transition:all 0.8s ease;
+/* --- KIFINOMULT IDŐVONAL --- */
+.elegant-timeline {
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: 80px;
+    text-align: right;
+    color: var(--text-main);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 30px;
+    position: relative;
+}
+
+/* Halvány, elegáns vonal köti össze a pontokat */
+.dot::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 1px;
+    height: 60px;
+    background-color: rgba(62, 59, 58, 0.1);
+}
+
+.timeline-item:last-child .dot::after {
+    display: none; /* Az utolsó pont után nincs vonal */
+}
+
+/* Színes, finom pöttyök a dobozok helyett */
+.dot-peach { background-color: var(--c-peach); box-shadow: 0 0 0 4px rgba(231,140,129,0.2); }
+.dot-bluebell { background-color: var(--c-bluebell); box-shadow: 0 0 0 4px rgba(166,183,215,0.2); }
+.dot-sage { background-color: var(--c-sage); box-shadow: 0 0 0 4px rgba(170,188,144,0.2); }
+.dot-yellow { background-color: var(--c-yellow); box-shadow: 0 0 0 4px rgba(241,194,107,0.2); }
+.dot-lilac { background-color: var(--c-lilac); box-shadow: 0 0 0 4px rgba(179,165,210,0.2); }
+
+.timeline-content {
+    flex: 1;
+    font-size: 1.05rem;
+}
+
+/* --- INFO BLOKKOK (Rács dobozok nélkül) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .info-grid { grid-template-columns: 1fr 1fr; gap: 60px 40px; }
+}
+
+.info-item h3 {
+    font-size: 1.6rem;
+    color: var(--c-peach);
+    margin-bottom: 10px;
+}
+
+/* --- GOMBOK --- */
+.btn-elegant {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 40px;
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.btn-elegant:hover {
+    background-color: var(--text-main);
+    color: white;
+}
+
+.small-text { font-size: 0.85rem; color: var(--text-light); margin-top: 15px; }
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--bg-page);
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+footer span {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--text-main);
+    text-transform: none;
+    margin-top: 10px;
+}
+
+/* --- ANIMÁCIÓK --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- MOBIL FINOMÍTÁSOK --- */
+@media (max-width: 600px) {
+    h1 { font-size: 3.2rem; }
+    .section { padding: 80px 20px; }
+    .gallery-img { height: 200px; border-radius: 100px 100px 10px 10px; }
+    .mt-down { margin-top: 20px; }
+    .time { font-size: 1.2rem; width: 60px; }
+    .dot { margin: 0 20px; }
+    .dot::after { height: 75px; } /* Kicsit hosszabb vonal fussa át a több soros szöveget */
 }
