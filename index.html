@@ -5,129 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanna & Berci | 2027.06.26.</title>
     
-    <!-- Új, magas minőségű betűtípusok: Cormorant Garamond és Montserrat -->
+    <!-- Betűtípusok: Great Vibes (ecsetvonásos) és Montserrat (letisztult olvasáshoz) -->
     <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
     <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap)" rel="stylesheet">
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&display=swap)" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NYITÓOLDAL -->
-<header class="hero">
+<!-- 1. NYITÓOLDAL (Kép a háttérben) -->
+<header class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content reveal">
-        <p class="date-badge">2027. június 26.</p>
-        <h1>Hanna & Berci</h1>
-        <p class="subtitle">Összeházasodunk</p>
+        <h1 class="brush-title">Hanna & Berci</h1>
+        <p class="date-text">2027.06.26.</p>
+        <!-- IDE KERÜLT A VISSZASZÁMLÁLÓ -->
         <div class="countdown" id="countdown">Várakozás a nagy napra...</div>
     </div>
 </header>
 
-<!-- KÖSZÖNTŐ -->
-<section class="section">
+<!-- 2. MEGHÍVÓ -->
+<section class="section section-meghivo">
     <div class="container reveal center">
-        <h2 class="section-title">Szeretettel köszöntünk</h2>
-        <div class="floral-divider">~ 🌸 ~</div>
-        <p class="lead-text">A legszebb pillanatok akkor nyernek igazi értelmet, ha azokkal oszthatjuk meg, akiket a legjobban szeretünk.</p>
-        <p>Hatalmas örömmel és izgalommal jelentjük be, hogy 2027. június 26-án hivatalosan is összekötjük az életünket. Nagyon sokat jelentne számunkra, ha velünk ünnepelnétek ezen a vidám, vadvirágos, nyári napon. Ez az oldal azért jött létre, hogy minden fontos információt megtaláljatok egy helyen.</p>
-        <p class="signature">Hanna és Berci</p>
+        <h2 class="brush-title section-title">Meghívó</h2>
+        
+        <p class="italic-lead">A legszebb pillanatok akkor nyernek igazi értelmet, ha azokkal oszthatjuk meg, akiket a legjobban szeretünk.</p>
+        
+        <p>Örömmel osztjuk meg veletek, hogy 2027. június 26-án összeházasodunk.</p>
+        
+        <p>Szeretnénk, ha ezen a különleges napon velünk ünnepelnétek. Ezen a weboldalon fogunk megosztani veletek minden fontos információt az esküvővel kapcsolatban.</p>
+        
+        <p>Még van egy kis idő a nagy napig, de az oldal már most elindul, és ahogy közeledik az esküvő, egyre több részlet kerül majd fel.</p>
+        
+        <p>Nagyon várjuk, hogy együtt ünnepelhessünk veletek!</p>
+        
+        <p class="brush-title signature">Hanna & Berci</p>
     </div>
 </section>
 
-<!-- GALÉRIA -->
-<section class="section bg-blush">
-    <div class="container reveal">
-        <h2 class="section-title center">Pillanatképek</h2>
-        <p class="center lead-text">Ilyen vidám, színes és élettel teli ünneplést álmodtunk meg.</p>
+<!-- 3. RSVP / GOOGLE FORM -->
+<section class="section section-rsvp">
+    <div class="container reveal center">
+        <h2 class="brush-title section-title">Visszajelzés</h2>
+        
+        <p>Szeretnénk, ha minden tökéletes lenne ezen a napon. A szervezés megkönnyítése érdekében kérünk titeket, hogy töltsétek ki az alábbi űrlapot.</p>
+        <p>Az itt megadott információkat kizárólag az esküvő szervezéséhez használjuk fel.<br>Köszönjük a segítségeteket!</p>
+        
+        <!-- Ez a gomb később a Google Formodra fog vezetni -->
+        <a class="btn-elegant" href="#" target="_blank">Google Űrlap Kitöltése</a>
+    </div>
+</section>
+
+<!-- 4. EMAIL FELIRATKOZÁS -->
+<section class="section section-email">
+    <div class="container reveal center">
+        <h2 class="brush-title section-title">Értesítést kérek</h2>
+        
+        <p>Mivel még sok részlet szervezés alatt áll, iratkozz fel e-mail listánkra! Nem fogunk spammelni, csak azonnal szólunk, ha új, fontos információ (szállás, pontos program) kerül fel az oldalra.</p>
+        
+        <!-- Mailchimp / Google Form beágyazás helye -->
+        <div class="mock-form">
+            <input type="email" placeholder="ide írd az e-mail címed..." class="email-input">
+            <a href="#" class="btn-elegant btn-solid">Feliratkozom</a>
+        </div>
+        <p class="small-text">(Ide kerül majd a működő feliratkozó doboz)</p>
+    </div>
+</section>
+
+<!-- 5. RÓLUNK (FOTÓKKAL) -->
+<section class="section section-rolunk">
+    <div class="container reveal center">
+        <h2 class="brush-title section-title">Rólunk</h2>
+        
+        <p>Mivel sokan különböző időszakaiból ismertek minket, gondoltuk megosztunk néhány közös emléket is.</p>
+        <p>Itt találtok majd pár kedvenc fotót az elmúlt évekből – utazásokról, kirándulásokról és hétköznapi pillanatokról, amelyekből összeállt a mi történetünk.</p>
         
         <div class="gallery-grid">
-            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800)" alt="Vadvirágok" class="gallery-img">
-            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Esküvői asztal" class="gallery-img mt-down">
-            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=800)" alt="Csokor" class="gallery-img">
-            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800)" alt="Vidám pillanatok" class="gallery-img mt-down">
+            <!-- Ahogy kérted, minden kép helyén az 1.kép (asztaldíszes) stílusa jelenik meg inspirációként -->
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Idézet 1.kép">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Idézet 1.kép">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Idézet 1.kép">
+            <img src="[images.unsplash.com](https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800)" alt="Idézet 1.kép">
         </div>
     </div>
 </section>
 
-<!-- PROGRAM -->
-<section class="section">
-    <div class="container reveal">
-        <h2 class="section-title center">A Nagy Nap Menete</h2>
-        <div class="floral-divider">~ ✨ ~</div>
-        
-        <div class="elegant-timeline">
-            <div class="timeline-item">
-                <div class="time">14:30</div>
-                <div class="dot dot-peach"></div>
-                <div class="timeline-content">Vendégvárás, koccintás és falatkák</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">16:00</div>
-                <div class="dot dot-bluebell"></div>
-                <div class="timeline-content">Polgári szertartás a természetben</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">17:00</div>
-                <div class="dot dot-sage"></div>
-                <div class="timeline-content">Közös fotózás és gratuláció</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">18:30</div>
-                <div class="dot dot-yellow"></div>
-                <div class="timeline-content">Ünnepi vacsora</div>
-            </div>
-            <div class="timeline-item">
-                <div class="time">21:00</div>
-                <div class="dot dot-lilac"></div>
-                <div class="timeline-content">Nyitótánc, majd buli kifulladásig!</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TUDNIVALÓK -->
-<section class="section bg-blush">
-    <div class="container reveal">
-        <h2 class="section-title center">Fontos Tudnivalók</h2>
-        <div class="floral-divider">~ 🌿 ~</div>
-        
-        <div class="info-grid">
-            <div class="info-item">
-                <h3>Vadvirág Birtok</h3>
-                <p><strong>Példa település, Virág utca 1.</strong><br>A szertartás és a lagzi is egy helyen, gyönyörű szabadtéri környezetben lesz. Kényelmes parkolást biztosítunk mindenki számára.</p>
-            </div>
-            <div class="info-item">
-                <h3>Dress Code</h3>
-                <p>Elegáns, de kényelmes. A hangsúly a pasztell és vidám színeken van. Kérjük, a fehér és a teljesen fekete ruhákat mellőzzétek, a fű miatt pedig a tűsarkú helyett a vastagabb sarkú cipőket ajánljuk.</p>
-            </div>
-            <div class="info-item">
-                <h3>Ajtónálló Ajándék</h3>
-                <p>A legnagyobb ajándék számunkra, ha velünk ünnepeltek! Ha ezen felül is szeretnétek meglepni minket, a közös életünk elindításához való hozzájárulást borítékban örömmel fogadjuk.</p>
-            </div>
-            <div class="info-item">
-                <h3>Szállás</h3>
-                <p>A legközelebbi szálláshelyeket a környéken hamarosan listázzuk. Ha igényeltek szobát, kérjük, az RSVP űrlapon jelezzétek előre felénk!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- RSVP -->
-<section class="section">
+<!-- 6. HELYSZÍN (COMING SOON) -->
+<section class="section section-helyszin">
     <div class="container reveal center">
-        <h2 class="section-title">Visszajelzés (RSVP)</h2>
-        <p class="lead-text">Kérjük, legkésőbb 2027. május 1-ig jelezzétek részvételi szándékotokat.</p>
-        <p>A vacsora és az ültetés pontos megtervezéséhez nagy segítség számunkra, ha időben kitöltitek az űrlapot. Köszönjük!</p>
+        <h2 class="brush-title section-title">Helyszín és hasznos információk</h2>
         
-        <a class="btn-elegant" href="#" target="_blank">Részvétel Megerősítése</a>
-        <p class="small-text"><br>Ide kerül majd a Google Űrlap hivatkozása.</p>
+        <div class="coming-soon">
+            <span class="brush-title big-soon">Coming Soon...</span>
+        </div>
+    </div>
+</section>
+
+<!-- 7. PROGRAM (COMING SOON) -->
+<section class="section section-program">
+    <div class="container reveal center">
+        <h2 class="brush-title section-title">Program</h2>
+        
+        <div class="coming-soon">
+            <span class="brush-title big-soon">Coming Soon...</span>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>Szeretettel várunk<br><span>Hanna & Berci</span></p>
+    <p>Hanna & Berci • 2027.06.26.</p>
 </footer>
 
 <script src="script.js"></script>
