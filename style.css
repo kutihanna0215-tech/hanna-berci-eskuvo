@@ -161,13 +161,13 @@ body {
     pointer-events: none;
 }
 
-/* Felső egyharmad: név + visszaszámláló */
+/* Felső rész: név + visszaszámláló — kompakt */
 .hero-top {
     position: relative;
     z-index: 2;
     text-align: center;
     flex: 0 0 auto;
-    padding: 50px 40px 40px;
+    padding: 28px 40px 16px;
 }
 
 .hero-eyebrow {
@@ -226,10 +226,10 @@ body {
 .std-frame {
     border: 1px solid rgba(200, 134, 10, 0.35);
     border-radius: 4px;
-    padding: 18px;
-    background: rgba(253,246,232,0.7);
-    max-width: 480px;
-    width: 90vw;
+    padding: 20px;
+    background: rgba(253,246,232,0.75);
+    max-width: 700px;
+    width: 92vw;
 }
 
 .std-label {
@@ -244,7 +244,7 @@ body {
 
 .std-img-placeholder {
     width: 100%;
-    height: 260px;
+    height: min(480px, 52vw);
     background: var(--cream-dk);
     border-radius: 3px;
     display: flex;
@@ -460,15 +460,32 @@ body {
 .flower-row {
     display: flex;
     justify-content: center;
-    padding: 8px 0;
-    background: inherit;
-    line-height: 0;
+    padding: 0;
+    margin: -30px 0;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
 }
 
-.flower-row svg { width: 100%; max-width: 700px; height: 45px; display: block; }
+.flower-divider-img {
+    width: min(520px, 88vw);
+    height: auto;
+    display: block;
+    /* PNG átlátszóság megtartva — fehér háttér elrejtve */
+    mix-blend-mode: multiply;
+}
 
-.section-divider { line-height: 0; }
-.section-divider svg { display: block; width: 100%; }
+/* A második elválasztó tükrözve, hogy ne ismétlődjön gépiesen */
+.flower-divider-flip {
+    transform: scaleX(-1);
+}
+
+/* Lábléc kis virág */
+.flower-divider-footer {
+    width: min(320px, 70vw);
+    opacity: 0.75;
+    margin-bottom: 12px;
+}
 
 /* ============================================================
    LÁBLÉC
